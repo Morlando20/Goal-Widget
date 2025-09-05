@@ -12,3 +12,4 @@ Open `index.html` in a browser or embed it in your streaming software as a brows
   `index.html?goal_name=MOVIE%20NIGHT&current_value=20&goal_value=100`.
 - Call the `updateGoal(goalName, currentValue, goalValue)` function to update the widget dynamically.
 - When the goal is reached, the celebration placeholder and goal reached message will display.
+- Click the `+1` emulator button to increment progress for testing.

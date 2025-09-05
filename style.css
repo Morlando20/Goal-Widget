@@ -109,3 +109,12 @@ body {
   0%, 100% { transform: translate(-50%, -50%) scale(0.8); }
   50% { transform: translate(-50%, -50%) scale(1.2); }
 }
+
+.emulator-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  z-index: 1;
+}
