@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: sans-serif;
+}
+
+.goal-widget {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('placeholder-background.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.goal-name {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px #000;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: #4caf50;
+  border-radius: 15px 0 0 15px;
+  transition: width 0.5s ease;
+}
+
+.character {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url('placeholder-character.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: left 0.5s linear;
+}
+
+.progress-text {
+  text-align: center;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 5px #000;
+}
+
+.goal-complete-message {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  display: none;
+  text-shadow: 0 0 5px #000;
+}
+
+.celebration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: none;
+}
+
+.celebration.show {
+  display: block;
+}
+
+/* Placeholder celebration animation */
+.celebration.show::before {
+  content: '🎉';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  animation: pop 1s ease-in-out infinite;
+}
+
+@keyframes pop {
+  0%, 100% { transform: translate(-50%, -50%) scale(0.8); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
+}
